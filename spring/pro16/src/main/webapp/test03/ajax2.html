@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ajax1</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+   function fn_process() {
+      $.ajax({
+         type:"post",
+         dataType:"xml",
+         async: false,
+         url: "http://localhost:8080/pro16/ajaxTest2",
+         success: function (info, textStatus) {
+            console.log("success");
+            $(info).find("book").each(function () {
+               var title=$(this).find("title").text();
+               var writer=$(this).find("writer").text();
+               var image=$(this).find("image").text();
+               console.log(title, writer, image);
+               $("#bookInfo").append(
+                  "<p>" + title + "</p>" +
+                  "<p>" + writer + "</p>" +
+                  "<a href ="+image+">"+"<img src=" + image + ">"+"</a>"
+               );
+            });
+         },
+         error:function(info, textStatus) {
+            alert("에러 발생");
+         },
+         complete: function (info, textStatus) {
+            alert("작업 완료");
+         }
+      });
+   }
+</script>
+</head>
+<body>
+   <input type="button" value="전송하기" onclick="fn_process()" /><br><br>
+   <div id="bookInfo"></div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath }"/>
+<%
+	request.setCharacterEncoding("utf-8");
+%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Home</title>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script>
+		$(function() {
+			$("#checkJson").click(function() {
+				alert("click 이벤트 발생");
+				var member = {
+						id:"park",
+						name:"박지성",
+						pwd:"1234",
+						email:"park@test.com"
+				};
+				$.ajax({
+					type: "post",
+					url: "${contextPath}/test/info",
+ 					contentType: "application/json", 
+					data : JSON.stringify(member),
+					success: function(data, textStatus) {
+						alert("success");
+					},
+					error: function(request, status, error) {
+						alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+					}, 
+					complete: function(data, textStatus) {
+					}
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<input type="button" id="checkJson" value="회원 정보 보내기"/>
+	<br><br>
+	<div id="output"></div>
+</body>
+</html>

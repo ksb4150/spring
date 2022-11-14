@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ID 선택자 연습2</title>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript">
+		function addHtml() {
+			$("#article p:first").html('안녕하세요'+'<br>');
+			$("#article p:last").text("이것도 되나");
+		}
+	</script>
+</head>
+<body>
+	<div id="article">
+		<p></p>
+		<p></p>
+	</div>
+	<input type="button" value="추가하기" onClick="addHtml()" />
+</body>
+</html>

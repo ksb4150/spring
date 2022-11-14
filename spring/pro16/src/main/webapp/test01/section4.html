@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>도서쇼핑몰</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		html,body {
+			width: 100%;
+			height: 70%;
+		}
+		html {
+			overflow-y : scroll;
+		}
+		body, h1, h2, h3, h4, input, button {
+			font-family: NanumGothicWeb, verdana, dotum, sans-serif;
+			font-size: 13px;
+			color: #383d41;
+		}
+		header {
+			height: 90px;
+			border: 1px solid black;
+			background: violet;
+			margin: 5px;
+		}
+		header h1, p {
+			float: left;
+			color: white;
+			margin: 10px;
+		}
+		header h1 {
+			width: 80%;
+		}
+		nav {
+			height: 20px;
+			margin: 2px;
+		}
+		nav li {
+			display: inline;
+			list-style-type: none;
+			margin : 10px;
+		}
+		section {
+			float: left;
+			width: 75%;
+			height: 300px;
+			background-color: skyblue;
+			border: 1px solid black;
+			margin: 5px;
+		}
+		section article {
+			clear: both;
+			display: block;
+			margin: 5px;
+		}
+		article p {
+			color: black;
+		}
+		aside {
+			float: left;
+			width: 20%;
+			height: 300px;
+			border: 1px solid black;
+			margin: 5px;
+		}
+		aside div, h3 {
+			width: 80%;
+		}
+		aside div {
+			margin : 10px;
+			height: 200px;
+		}
+		aside h3 {
+			padding: 2px;
+			margin-left : 10px;
+		}
+		#ad {
+			background-color: lightgray;
+		}
+		footer {
+			clear: both;
+			height: 80px;
+			background-color: skyblue;
+			border: 1px solid black;
+			margin: 5px;
+			padding-left: 30px;
+			display: flex;
+			justify-content: center;
+		}
+		footer p {
+			clear: both;
+			color: black;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>책 읽는 사람이 세상을 바꾼다!!</h1>
+		<p>by 홍길동</p>
+	</header>
+	<nav>
+		<ul>
+			<li>국내도서</li>
+			<li>서양도서</li>
+			<li>베스트셀러</li>
+			<li>e-book</li>
+			<li>아동전집</li>
+			<li>이벤트</li>
+			<li>문화행사</li>
+		</ul>
+	</nav>
+	<section>
+		<article>
+			<h3>첫 번째 도서 제목</h3>
+			<p>첫 번째 도서의 내용
+		</article>
+		<article>
+			<h3>두 번째 도서 제목</h3>
+			<p>두 번째 도서의 내용
+		</article>
+		<article>
+			<h3>세 번째 도서 제목</h3>
+			<p>세 번째 도서의 내용</p>
+		</article>
+	</section>
+	<aside>
+		<div id="ad">문화 강좌 광고</div>
+		<h3>html5 강좌</h3>
+		<h3>컴퓨터 강좌</h3>
+		<h3>독서 강좌</h3>
+	</aside>
+	<footer>
+		<p>
+			이메일 : admin@test.com <br>
+			회사주소 : 서울시 강동구 <br>
+			찾아오는 길 : <a href = "#">약도</a> <br>
+		</p>
+	</footer>
+</body>
+</html>

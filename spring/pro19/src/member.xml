@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="memberService" class="com.spring.ex03.MemberServiceImpl">
+		<property name="memberDAO" ref="memberDAO" /> 
+		<!-- 
+			name 뒤 memberDAO는 MemberServiceImpl의 멤버 memberDAO를 말함
+			ref 뒤 memberDAO는 10번째 줄에 있는 id를 말함 
+		-->
+	</bean>
+	
+	<bean id="memberDAO" class="com.spring.ex03.MemberDAOImpl"/> <!-- MemberDAOImpl 객체의 주소를 id memberDAO에 저장 -->
+</beans>
